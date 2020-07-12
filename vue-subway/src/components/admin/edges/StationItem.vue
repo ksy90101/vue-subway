@@ -15,7 +15,7 @@
 <script>
 export default {
   props: {
-    station: Object,
+    station: String,
   },
 };
 </script>
