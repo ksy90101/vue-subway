@@ -3,15 +3,26 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+import subwayStations from "../components/admin/stations/SubwayStations.vue"
+import subwayLines from "../components/admin/lines/SubwayLines.vue"
+import subwayEdges from "../components/admin/edges/SubwayEdges.vue"
+import subwayMain from "../components/admin/main/SubwayMain.vue" 
 const routes = [
   {
-    path: "/stations"
+    path: "/",
+    component: subwayMain
   },
   {
-    path: "/lines"
+    path: "/stations",
+    component: subwayStations
   },
   {
-    path: "/edges"
+    path: "/lines",
+    component: subwayLines
+  },
+  {
+    path: "/edges",
+    component: subwayEdges
   }
 ];
 
