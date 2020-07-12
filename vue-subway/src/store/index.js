@@ -1,14 +1,20 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { lines } from "../constract/SubwayMockData";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    stations:[],
-    lines:[]
+    stations: [],
+    lines: lines,
   },
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {},
+  getters: {
+    getLines: (state) => {
+      return state.lines;
+    },
+  },
 });

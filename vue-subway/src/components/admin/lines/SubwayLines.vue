@@ -55,7 +55,6 @@
 </template>
 
 <script>
-import { defaultSubwayLines } from "../../../constract/SubwayMockData.js";
 import lineItem from "./LineItem";
 import lineForm from "./LineForm";
 
@@ -66,9 +65,13 @@ export default {
   },
   data: function() {
     return {
-      lines: defaultSubwayLines,
       isModal: false,
     };
+  },
+  computed: {
+    lines() {
+      return this.$store.getters.getLines;
+    },
   },
   methods: {
     toggleModal: function() {

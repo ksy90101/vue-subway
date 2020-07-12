@@ -1,4 +1,4 @@
-export const defaultSubwayLines = [
+export const lines = [
   {
     id: 1,
     name: "1호선",
